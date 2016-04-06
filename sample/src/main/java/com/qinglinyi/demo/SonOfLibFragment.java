@@ -1,6 +1,6 @@
 package com.qinglinyi.demo;
 
-import com.qinglinyi.compiler.api.UseArg;
+import com.qinglinyi.arg.api.UseArg;
 import com.qinglinyi.mylibrary.LibFragment;
 
 /**

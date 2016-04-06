@@ -1,5 +1,6 @@
 package com.qinglinyi.arg.compiler;
 
+import com.qinglinyi.arg.api.Injector;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
@@ -23,7 +24,7 @@ final class InjectorGenerator {
 
     static TypeSpec generateClass(List<AnnotatedClass> classes) {
         TypeSpec.Builder builder = classBuilder(CLASS_NAME).addModifiers(PUBLIC, FINAL);
-        builder.addSuperinterface(ClassName.get(com.qinglinyi.compiler.api.Injector.class));
+        builder.addSuperinterface(ClassName.get(Injector.class));
         builder.addMethod(maskInjectMethod(classes));
         return builder.build();
     }

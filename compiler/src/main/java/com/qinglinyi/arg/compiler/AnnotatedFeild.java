@@ -1,6 +1,6 @@
 package com.qinglinyi.arg.compiler;
 
-import com.qinglinyi.compiler.api.Arg;
+import com.qinglinyi.arg.api.Arg;
 
 import javax.lang.model.element.Element;
 import javax.lang.model.type.TypeMirror;

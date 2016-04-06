@@ -1,4 +1,4 @@
-package com.qinglinyi.compiler.api;
+package com.qinglinyi.arg.api;
 
 public interface Injector {
 

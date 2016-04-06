@@ -1,7 +1,7 @@
 package com.qinglinyi.demo;
 
-import com.qinglinyi.compiler.api.Arg;
-import com.qinglinyi.compiler.api.UseArg;
+import com.qinglinyi.arg.api.Arg;
+import com.qinglinyi.arg.api.UseArg;
 
 import java.util.ArrayList;
 

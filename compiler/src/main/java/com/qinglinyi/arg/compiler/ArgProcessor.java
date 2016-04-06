@@ -1,8 +1,8 @@
 package com.qinglinyi.arg.compiler;
 
 import com.google.auto.service.AutoService;
-import com.qinglinyi.compiler.api.Arg;
-import com.qinglinyi.compiler.api.UseArg;
+import com.qinglinyi.arg.api.Arg;
+import com.qinglinyi.arg.api.UseArg;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 

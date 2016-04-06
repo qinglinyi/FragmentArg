@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.qinglinyi.compiler.api.Arg;
-import com.qinglinyi.compiler.api.ArgInjector;
-import com.qinglinyi.compiler.api.UseArg;
+import com.qinglinyi.arg.api.Arg;
+import com.qinglinyi.arg.api.ArgInjector;
+import com.qinglinyi.arg.api.UseArg;
 
 /**
  * @author qinglinyi
