@@ -1,5 +1,5 @@
 apply plugin: 'java'
-
+apply plugin: 'com.novoda.bintray-release'
 
 // This is important even if Android Studio claims it isn't
 // used. Android can't interpret Java 8 byte code.
@@ -10,4 +10,16 @@ dependencies {
     compile project (':api')
     compile 'com.google.auto.service:auto-service:1.0-rc2'
     compile 'com.squareup:javapoet:1.0.0'
+}
+
+publish {
+    artifactId = 'FragmentArg-compiler'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    publishVersion = rootProject.publishVersion
+    description = rootProject.description
+    website = rootProject.website
+    bintrayUser = rootProject.bintrayUser
+    bintrayKey = rootProject.bintrayKey
+    dryRun = rootProject.dryRun
 }
