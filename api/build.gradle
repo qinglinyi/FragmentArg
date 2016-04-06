@@ -7,7 +7,7 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 publish {
-    artifactId = 'FragmentArg-api'
+    artifactId = 'Arg-api'
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     publishVersion = rootProject.publishVersion

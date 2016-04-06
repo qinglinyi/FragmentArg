@@ -13,7 +13,7 @@ dependencies {
 }
 
 publish {
-    artifactId = 'FragmentArg-compiler'
+    artifactId = 'Arg-compiler'
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     publishVersion = rootProject.publishVersion
