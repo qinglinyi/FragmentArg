@@ -1,10 +1,8 @@
 # FragmentArg
 fragment arg 注解
 
-一个注解的demo，实现注解自动完成Argument。
+实现注解自动完成Argument。通过注解在编译的时候生成FragmentBuilder，通过Builder设置Argument。在Fragment中通过ArgInjector.inject获取Argument。
 
-参考：
-<https://github.com/sockeqwe/fragmentargs>
 
 ## 使用
 
@@ -81,5 +79,6 @@ public class MyFragment extends Fragment {
                 .build();
 ```
 
-
+参考：
+<https://github.com/sockeqwe/fragmentargs>
 
