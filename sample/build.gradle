@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.qinglinyi.fragmentarg"
+        applicationId "com.qinglinyi.arg.sample"
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
@@ -22,8 +22,17 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.qinglinyi.arg:arg-api:0.9.0'
+    apt 'com.qinglinyi.arg:arg-compiler:0.9.0'
     compile 'com.android.support:appcompat-v7:23.2.1'
-    compile project(':api')
-    apt project(':compiler')
-    compile project(':samplelibrary')
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+}
+
+apt {
+
+    arguments {
+        // FragmentBuilder的包
+        argPackageName "com.qinglinyi.arg.sample"
+    }
 }
