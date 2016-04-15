@@ -19,11 +19,12 @@ import static javax.lang.model.element.Modifier.STATIC;
 final class BuilderGenerator {
 
 
-    private static final String CLASS_NAME = "FragmentBuilder";
+    private static final String DEFAULT_CLASS_NAME = "FragmentBuilder";
 
 
-    public static TypeSpec generateClass(List<AnnotatedClass> classes) {
-        TypeSpec.Builder builder = classBuilder(CLASS_NAME).addModifiers(PUBLIC, FINAL);
+    public static TypeSpec generateClass(List<AnnotatedClass> classes, String builderName) {
+        String className = builderName == null ? DEFAULT_CLASS_NAME : builderName;
+        TypeSpec.Builder builder = classBuilder(className).addModifiers(PUBLIC, FINAL);
         builder.addMethod(MethodSpec.constructorBuilder().addModifiers(PRIVATE).build());
         for (AnnotatedClass annotate : classes) {
             if (!annotate.isSupperClass) {

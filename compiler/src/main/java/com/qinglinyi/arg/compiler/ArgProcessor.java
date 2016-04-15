@@ -44,9 +44,11 @@ public class ArgProcessor extends AbstractProcessor {
 
     private static final String OPTION_IS_LIBRARY = "argIsLibrary";
     private static final String OPTION_PACKAGE_NAME = "argPackageName";
+    private static final String OPTION_BUILDER_NAME = "builderName";
 
     private boolean isLibrary;
     private String packageName;// Builder、Injector 包名
+    private String builderName;
 
 
     @Override
@@ -70,6 +72,7 @@ public class ArgProcessor extends AbstractProcessor {
         Set<String> supportTypes = new LinkedHashSet<>();
         supportTypes.add(OPTION_IS_LIBRARY);
         supportTypes.add(OPTION_PACKAGE_NAME);
+        supportTypes.add(OPTION_BUILDER_NAME);
         return supportTypes;
     }
 
@@ -86,6 +89,11 @@ public class ArgProcessor extends AbstractProcessor {
         String optionPackageName = processingEnv.getOptions().get(OPTION_PACKAGE_NAME);
         if (optionPackageName != null) {
             this.packageName = optionPackageName;
+        }
+
+        String builderName = processingEnv.getOptions().get(OPTION_BUILDER_NAME);
+        if (builderName != null) {
+            this.builderName = builderName;
         }
 
         List<AnnotatedClass> fragments = collectFragments(roundEnv.getElementsAnnotatedWith(UseArg.class));
@@ -324,7 +332,7 @@ public class ArgProcessor extends AbstractProcessor {
         }
 
         // 总的FragmentBuilder
-        generateJavaFile(BuilderGenerator.generateClass(list), packageName);
+        generateJavaFile(BuilderGenerator.generateClass(list, builderName), packageName);
 
         if (!isLibrary) {
             // 注入器实现
